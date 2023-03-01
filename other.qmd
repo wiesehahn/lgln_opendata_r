@@ -1,0 +1,30 @@
+## Other data
+
+### Load necessary libraries
+
+Let's load some basic libraries to work with the data
+
+```{r}
+#| echo: true
+#| output: false
+renv::restore()
+library(here)
+library(dplyr)
+library(ggplot2)
+library(sf)
+library(terra)
+library(vapour)
+```
+
+### Landkreise
+
+```{r}
+#| echo: true
+dat <- sf::st_read('https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/NI.geojson')
+
+dat |> 
+  ggplot() + 
+  geom_sf() + 
+  theme_void()
+
+```

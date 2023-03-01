@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "LGLN opendata in R"
+  search: false
+  navbar:
+    title: LGLN opendata
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "Orthophotos"
+        href: orthos.qmd
+      - text: "Sentinel-2"
+        href: sentinel.qmd
+      - text: "Other"
+        href: other.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/wiesehahn/precision-forestry
+
+
+  page-footer:
+    border: false
+    left: "Copyright 2023, Jens Wiesehahn"
+    right:
+      - icon: github
+        href: https://github.com/wiesehahn
+      - icon: twitter
+        href: https://twitter.com/JensWiesehahn
+      - icon: mastodon
+        href: https://fosstodon.org/@JensWiesehahn
+
+
+format:
+  html:
+    theme: litera
+    css: style.css
+    smooth-scroll: true
+    highlight: kate
+    toc: true
+    #embed-resources: true
+
+editor: visual
+
+execute:
+  echo: false
+  freeze: true
