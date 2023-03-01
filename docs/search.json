@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "LGLN opendata in R",
     "section": "",
-    "text": "The LGLN provides some of its geodata as open data.\nSince recently they provide ortho images of Lower Saxony for the last years as Cloud Optimized GeoTIFFs.\nMore information under https://opengeodata.lgln.niedersachsen.de/#dop"
+    "text": "The State Office for Geoinformation and Land Surveying Lower Saxony (LGLN) provides some of its geodata as open data.\nSince recently they provide ortho images of Lower Saxony for the last years as Cloud Optimized GeoTIFFs. Here we try to access the data via R to explore, vizualize and work with the imagery.\nMore information under"
   },
   {
     "objectID": "sentinel.html",

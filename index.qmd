@@ -1,8 +1,8 @@
 ## About LGLN opendata
 
-The LGLN provides some of its geodata as open data.
+The State Office for Geoinformation and Land Surveying Lower Saxony (LGLN) provides some of its geodata as open data.
 
-Since recently they provide ortho images of Lower Saxony for the last years as Cloud Optimized GeoTIFFs.
+Since recently they provide ortho images of Lower Saxony for the last years as Cloud Optimized GeoTIFFs. Here we try to access the data via R to explore, vizualize and work with the imagery.
 
 
-More information under [https://opengeodata.lgln.niedersachsen.de/#dop]()
+More information under [](https://opengeodata.lgln.niedersachsen.de/#dop)
