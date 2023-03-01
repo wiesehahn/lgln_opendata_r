@@ -207,3 +207,7 @@ img2 <- multitemporal |>
 
 terra::plotRGB(img2)
 ```
+
+::: {.callout-warning}
+Until now you will get a warning `Range downloading not supported by this server!` when trying to use range requests for RGBI data!
+:::
