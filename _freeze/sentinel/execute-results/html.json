@@ -1,0 +1,16 @@
+{
+  "hash": "f4b42efc4e416e7de6958a73673175c6",
+  "result": {
+    "markdown": "## Working with Sentinel-2\n\n### Load necessary libraries\n\nLet's load some basic libraries to work with the data\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrenv::restore()\nlibrary(here)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(sf)\nlibrary(terra)\nlibrary(vapour)\n```\n:::\n\n\n### Sentinel-2 tiles\n\nFirst we query and plot all Sentinel tiles covering Germany.\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndat <- sf::st_read('https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/DE_S2.geojson')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nReading layer `DE_S2' from data source \n  `https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/DE_S2.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 69 features and 1 field\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: 174139.8 ymin: 5190240 xmax: 1035431 ymax: 6200040\nProjected CRS: WGS 84 / UTM zone 32N\n```\n:::\n\n```{.r .cell-code}\ndat |> \n  ggplot() + \n  geom_sf(colour = \"black\", fill = NA) + \n  theme_void()\n```\n\n::: {.cell-output-display}\n![](sentinel_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n### BE8\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndat <- sf::st_read('https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/BE8_in_NI.geojson')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nReading layer `BE8_in_NI' from data source \n  `https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/BE8_in_NI.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 965 features and 1 field\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: 324000 ymin: 5680000 xmax: 676000 ymax: 5992000\nProjected CRS: WGS 84 / UTM zone 32N\n```\n:::\n\n```{.r .cell-code}\ndat |> \n  ggplot() + \n  geom_sf() + \n  theme_void()\n```\n\n::: {.cell-output-display}\n![](sentinel_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "sentinel_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

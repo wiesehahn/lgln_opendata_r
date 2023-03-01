@@ -1,0 +1,16 @@
+{
+  "hash": "0bbb74769953ece41e073b46b734db8a",
+  "result": {
+    "markdown": "## Other data\n\n### Load necessary libraries\n\nLet's load some basic libraries to work with the data\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrenv::restore()\nlibrary(here)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(sf)\nlibrary(terra)\nlibrary(vapour)\n```\n:::\n\n\n### Landkreise\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndat <- sf::st_read('https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/NI.geojson')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nReading layer `NI' from data source \n  `https://cloud.code-de.org:8080/swift/v1/AUTH_622a231224cb46c6982643e55e817c98/geojson/NI.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 45 features and 4 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 342771.5 ymin: 5682893 xmax: 674214.6 ymax: 5971585\nProjected CRS: WGS 84 / UTM zone 32N\n```\n:::\n\n```{.r .cell-code}\ndat |> \n  ggplot() + \n  geom_sf() + \n  theme_void()\n```\n\n::: {.cell-output-display}\n![](other_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "other_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
